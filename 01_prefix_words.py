@@ -30,13 +30,17 @@ All these words start with b, except for “carrot”.
 
 # Implement the below function and run the program
 
-
 def prefix_words(prefix, words):
-   pass
-        
-
-
-class TestPrefixWords(unittest.TestCase):
+    list_to_return = [] 
+       
+    for word in words: 
+       if word.startswith(prefix): 
+            list_to_return.append(word) 
+    return list_to_return 
+ print(prefix_words("de",["dog","deer","deal"]))  
+ 
+ 
+ class TestPrefixWords(unittest.TestCase):
 
     def test_1(self):
         self.assertEqual(prefix_words(
