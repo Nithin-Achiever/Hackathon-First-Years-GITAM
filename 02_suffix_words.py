@@ -3,26 +3,20 @@ import unittest
 question_02 = """
 Given a query string s and a list of all possible words,
 return all words that have s as a suffix.
-
 Example 1:
 Input:
 s = “ed”
 words = [“called”, “aged”, “land”]
-
 Output:
 [“called”, “aged”]
-
 Explanation:
 Only called and aged ends with ed.
-
 Example 2:
 Input:
 s = “d”
 words = [“helped”,  “held”, “land”, “mat”, “cat”, “bold”]
-
 Output:
 [“helped”,  “held”, “land”, “bold”]
-
 Explanation:
 All these words ends with d, except for “mat” and “cat”.
 """
@@ -31,7 +25,12 @@ All these words ends with d, except for “mat” and “cat”.
 
 
 def suffix_words(suffix, words):
-    pass
+   list1 = []
+   for i in words:
+      if suffix in i:
+         list1.append(i)
+   return list1
+suffix_words("ed", ["called","aged"])
 
 
 class TestSuffixWords(unittest.TestCase):
@@ -45,5 +44,5 @@ class TestSuffixWords(unittest.TestCase):
             'd', ['helped', 'held', 'land', 'mat', 'cat', 'bold']), ['helped', 'held', 'land', 'bold'])
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     unittest.main(verbosity=2)
