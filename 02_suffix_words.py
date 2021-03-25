@@ -31,13 +31,18 @@ All these words ends with d, except for “mat” and “cat”.
 
 
 def suffix_words(suffix, words):
-    pass
+     list1 = []     
+     for i in words: 
+        if suffix in i: 
+           list1.append(i) 
+     return list1 
+ suffix_words("ed", ["called","aged"]) 
 
+ 
+ class TestSuffixWords(unittest.TestCase): 
 
-class TestSuffixWords(unittest.TestCase):
-
-    def test_1(self):
-        self.assertEqual(suffix_words(
+      def test_1(self):
+          self.assertEqual(suffix_words(
             'ed', ['called', 'aged', 'land']), ['called', 'aged'])
 
     def test_2(self):
