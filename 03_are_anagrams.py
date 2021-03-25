@@ -31,7 +31,10 @@ False
 # Implement the below function and run the program
 
 def are_anagrams(word1, word2):
-    pass
+    if(sorted(word1) == sorted(word2)):
+        return True 
+    else:
+        return False
 
 
 class TestAreAnagrams(unittest.TestCase):
@@ -49,5 +52,5 @@ class TestAreAnagrams(unittest.TestCase):
         self.assertEqual(are_anagrams('dabc', 'akbc'), False)
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     unittest.main(verbosity=2)
