@@ -23,7 +23,18 @@ Explanation:
 # Implement the below function and run the program
 
 def clap_number(n):
-    pass
+    string = "clap"
+    ls=[str(i) for i in range(1,n+1)]
+    for i in range(len(ls)):
+        if int(ls[i])%3==0:
+            ls[i]=string
+        elif '3' in ls[i]:
+            ls[i]=string
+        elif '6' in ls[i]:
+            ls[i]=string
+        elif '9' in ls[i]:
+            ls[i]=string
+    return ls
 
 
 class TestClapNumber(unittest.TestCase):
@@ -45,5 +56,5 @@ class TestClapNumber(unittest.TestCase):
                                             "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "271", "272", "clap", "274", "275", "clap", "277", "278", "clap", "280", "281", "clap", "clap", "284", "clap", "clap", "287", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "400", "401", "clap", "clap", "404", "clap", "clap", "407", "clap", "clap", "410", "clap", "412", "clap", "clap", "415", "clap", "clap", "418", "clap", "clap", "421", "422", "clap", "424", "425", "clap", "427", "428", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "440", "clap", "442", "clap", "clap", "445", "clap", "clap", "448", "clap", "clap", "451", "452", "clap", "454", "455", "clap", "457", "458", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "470", "clap", "472", "clap", "clap", "475", "clap", "clap", "478", "clap", "clap", "481", "482", "clap", "484", "485", "clap", "487", "488", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "clap", "500", "clap", "502", "clap", "clap", "505", "clap", "clap", "508", "clap", "clap", "511", "512"])
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     unittest.main(verbosity=2)
