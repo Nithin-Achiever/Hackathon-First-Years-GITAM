@@ -25,7 +25,20 @@ Although 19 is prime, 91 is not.
 # Implement the below function and run the program
 
 def is_rotating_prime(num):
-    pass
+    num1 = str(num)
+    if(len(num1)==2):
+        return False
+    def is_prime(num): 
+        if num<=1:
+            return False
+        else:
+            return not any(num%2==0 or num%i==0 for i in range(3,int(num**0.5)+1,2)) 
+    num = str(num) 
+    for _ in range(len(num)): 
+        if not is_prime(int(num)): 
+            return False 
+        num = num[1:] + num[0]
+        return True
 
 
 class TestIsRotatingPrime(unittest.TestCase):
@@ -46,5 +59,5 @@ class TestIsRotatingPrime(unittest.TestCase):
         self.assertEqual(is_rotating_prime(919), True)
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     unittest.main(verbosity=2)
